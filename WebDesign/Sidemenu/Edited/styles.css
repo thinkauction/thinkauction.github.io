@@ -1,0 +1,180 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300);
+#cssSideBar {
+  position: relative;
+  margin-left:70px;
+  margin-top:10px;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;;
+  line-height: 1;
+  width: 150px;
+  
+}
+.align-right {
+  float: center;
+}
+#cssSideBar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: block;
+}
+#cssSideBar ul li {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+#cssSideBar ul li a {
+  text-decoration: none;
+  cursor: pointer;
+}
+#cssSideBar > ul > li > a {
+  color: #ff9900; /* main text - color*/
+  text-transform: uppercase;
+  display: block;
+  padding: 20px;
+  background: #E5E4E2;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  letter-spacing: 1px;
+  font-size: 10px;
+  font-weight: 300;
+  -webkit-transition: all 0.25s ease-in;
+  -moz-transition: all 0.25s ease-in;
+  -ms-transition: all 0.25s ease-in;
+  -o-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+  position: relative;
+}
+#cssSideBar > ul > li:first-child > a {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+#cssSideBar > ul > li:last-child > a {
+}
+#cssSideBar > ul > li:hover > a,
+#cssSideBar > ul > li.open > a,
+#cssSideBar > ul > li.active > a {
+  background: #E5E4E2;
+  color: #191919; /*color of text when hover*/
+  
+  
+}
+#cssSideBar ul > li.has-sub > a::after {
+  content: "";
+  margin-left:0px; /*position of the inverted triangle*/
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 13px solid #E5E4E2;
+  border-botom: 13px solid transparent;
+  border-left: 75px solid transparent; /*width of the cool inverted triangle */
+  border-right: 75px solid transparent;/*width of the cool inverted triangle */
+  left: 0;
+  bottom: -13px;
+  bottom: 0px;
+  z-index: 1;
+  opacity: 0;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+}
+#cssSideBar ul > li.has-sub > a::before {
+  content: "";
+  position: absolute;
+  margin-left:0px;
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 13px solid #E5E4E2; /*triangle for the main text*/
+  border-botom: 13px solid transparent;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  left: 0;
+  bottom: -12px;
+  bottom: -1px;
+  z-index: 3;
+  opacity: 0;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+}
+#cssSideBar ul > li.has-sub::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-top-color: #ff9900;
+  z-index: 2;
+  right: 20px;
+  top: 24.5px;
+  pointer-events: none;
+}
+#cssSideBar ul > li:hover::after,
+#cssSideBar ul > li.active::after,
+#cssSideBar ul > li.open::after {
+  border-top-color: #000000; /*arrow pointing down next to word*/
+}
+#cssSideBar ul > li.has-sub.open > a::after {
+  opacity: 1;
+  bottom: -13px;
+}
+#cssSideBar ul > li.has-sub.open > a::before {
+  opacity: 1;
+  bottom: -12px;
+}
+#cssSideBar ul ul {
+  display: none;
+}
+#cssSideBar ul ul li {
+  border-left: 1px solid #E5E4E2;
+  border-right: 1px solid #E5E4E2;
+}
+#cssSideBar ul ul li a {
+  background: #fcfcfc; /*bg of sub text*/
+  display: block;
+  position: relative;
+  font-size: 15px;
+  padding: 14px 20px;
+  border-bottom: 1px solid #191919; /*bottom line of the text color*/
+  color: #333333;/*sub product text color*/
+  font-weight: 300;
+ 
+}
+#cssSideBar ul ul li:first-child > a {
+  padding-top: 18px;
+}
+#cssSideBar ul ul ul li {
+  border: 0;
+}
+#cssSideBar ul ul li:hover > a,
+#cssSideBar ul ul li.open > a,
+#cssSideBar ul ul li.active > a {
+  background: #2C3539;
+  color: #b2b2b2;
+}
+#cssSideBar ul ul > li.has-sub > a::after {
+  border-top: 13px solid #2C3539;  /*cool inverted triangle for sub product*- mini line below the traingle*/
+}
+#cssSideBar ul ul > li.has-sub > a::before {
+  border-top: 13px solid #2C3539; /*cool inverted triangle for sub product*/
+}
+#cssSideBar ul ul ul li a {
+  padding-left: 30px;
+}
+#cssSideBar ul ul > li.has-sub::after {
+  top: 18.5px;
+  border-width: 6px;
+  border-top-color: #2C3539; /*sub product side traingle color*/
+}
+
+#cssSideBar ul ul > li:hover::after,
+#cssSideBar ul ul > li.active::after,
+#cssSideBar ul ul > li.open::after {
+  border-top-color: #2C3539;  
+}
